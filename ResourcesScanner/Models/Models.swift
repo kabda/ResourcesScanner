@@ -8,7 +8,7 @@
 
 import Cocoa
 
-struct Resource: Filetype, FileOperable, ImageOperable, Comparable {
+struct Resource: Filetype, ImageOperable {
 
     //Filetype
     var path: String?
@@ -25,4 +25,21 @@ struct Resource: Filetype, FileOperable, ImageOperable, Comparable {
     func makeFingerprint() {
 
     }
+
+}
+
+
+
+struct Resources: FileOperable, Comparable {
+    var resources: Array<Resource>?
+
+    static func scanResources(inBundle: String?) -> Array<String>? {
+
+
+        return []
+    }
+
+
+
+
 }
