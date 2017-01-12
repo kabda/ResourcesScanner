@@ -10,8 +10,10 @@
 		9075F7811DFA544700D92208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075F7801DFA544700D92208 /* AppDelegate.swift */; };
 		9075F7831DFA544700D92208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9075F7821DFA544700D92208 /* Assets.xcassets */; };
 		9075F7861DFA544700D92208 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9075F7841DFA544700D92208 /* MainMenu.xib */; };
-		9075F78E1DFA55E500D92208 /* ImageProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9075F78D1DFA55E500D92208 /* ImageProcessorProtocol.swift */; };
 		90D871331E26368F0016B0D2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D871321E26368F0016B0D2 /* Models.swift */; };
+		90FE7DE71E2766660052F073 /* FileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE7DE61E2766660052F073 /* FileProtocols.swift */; };
+		90FE7DE91E276A6D0052F073 /* ImageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE7DE81E276A6D0052F073 /* ImageProtocols.swift */; };
+		90FE7DEB1E277A400052F073 /* ContrastProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE7DEA1E277A400052F073 /* ContrastProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +22,10 @@
 		9075F7821DFA544700D92208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9075F7851DFA544700D92208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9075F7871DFA544700D92208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9075F78D1DFA55E500D92208 /* ImageProcessorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessorProtocol.swift; sourceTree = "<group>"; };
 		90D871321E26368F0016B0D2 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		90FE7DE61E2766660052F073 /* FileProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileProtocols.swift; sourceTree = "<group>"; };
+		90FE7DE81E276A6D0052F073 /* ImageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProtocols.swift; sourceTree = "<group>"; };
+		90FE7DEA1E277A400052F073 /* ContrastProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrastProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,9 @@
 		9075F77F1DFA544600D92208 /* ResourcesScanner */ = {
 			isa = PBXGroup;
 			children = (
+				90FE7DE11E275D660052F073 /* Protocols */,
 				90D871311E2636570016B0D2 /* Models */,
 				9075F7801DFA544700D92208 /* AppDelegate.swift */,
-				9075F78D1DFA55E500D92208 /* ImageProcessorProtocol.swift */,
 				9075F7821DFA544700D92208 /* Assets.xcassets */,
 				9075F7841DFA544700D92208 /* MainMenu.xib */,
 				9075F7871DFA544700D92208 /* Info.plist */,
@@ -70,6 +74,16 @@
 				90D871321E26368F0016B0D2 /* Models.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		90FE7DE11E275D660052F073 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				90FE7DE61E2766660052F073 /* FileProtocols.swift */,
+				90FE7DE81E276A6D0052F073 /* ImageProtocols.swift */,
+				90FE7DEA1E277A400052F073 /* ContrastProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +113,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "樊远东";
 				TargetAttributes = {
 					9075F77C1DFA544600D92208 = {
@@ -143,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FE7DEB1E277A400052F073 /* ContrastProtocols.swift in Sources */,
+				90FE7DE71E2766660052F073 /* FileProtocols.swift in Sources */,
+				90FE7DE91E276A6D0052F073 /* ImageProtocols.swift in Sources */,
 				90D871331E26368F0016B0D2 /* Models.swift in Sources */,
-				9075F78E1DFA55E500D92208 /* ImageProcessorProtocol.swift in Sources */,
 				9075F7811DFA544700D92208 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +197,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -230,6 +247,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -6,14 +6,23 @@
 //  Copyright © 2017 樊远东. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
-struct Image {
+struct Resource: Filetype, FileOperable, ImageOperable, Comparable {
 
+    //Filetype
+    var path: String?
 
-    init(withPath path: NSString) {
+    var fingerprint: String?
 
-
+    init?(withPath path: String) {
+        guard path.characters.count > 0 else {
+            return nil
+        }
+        self.path = path
     }
 
+    func makeFingerprint() {
+
+    }
 }
